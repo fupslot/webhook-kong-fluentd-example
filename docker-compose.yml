@@ -133,6 +133,9 @@ services:
     - ./fluentd/logs:/output # Example: Fluentd will collect logs and store it here for demo
     ports:
       - 9880:9880
+    environment:
+      AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID:-}"
+      AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY:-}"
     logging:
       driver: "local"
 
