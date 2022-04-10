@@ -131,6 +131,7 @@ services:
     volumes:
     - ./fluentd/config:/fluentd/etc
     - ./fluentd/logs:/output # Example: Fluentd will collect logs and store it here for demo
+    - ./fluentd/input:/var/log/input
     ports:
       - 9880:9880
     environment:
